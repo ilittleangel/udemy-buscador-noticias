@@ -16,6 +16,7 @@ class App extends React.Component {
 
   consultarNoticias = async (categoria = 'general') => {
     const url = `https://newsapi.org/v2/top-headlines?country=mx&category=${categoria}&apiKey=1c9686b7dffb4650b357e47ffd5a19ad`;
+    console.log(url);
     const response = await fetch(url);
     const noticias = await response.json();
     this.setState({
